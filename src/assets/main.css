@@ -1,0 +1,139 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+.hex-brick {
+  background: linear-gradient(102deg, #00cc88 0%, #1096b7 100%);
+}
+
+.spinner
+{
+  height: 150px !important;
+  width: 150px !important;
+}
+
+.spinner-inner{
+  transform: scale(0.6) !important;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+
+html {
+  height: 400px;
+  width: 400px;
+}
+body {
+  background: radial-gradient(circle at 56%, #f5f5f5 0%, #f2f2f2 99%);
+  font-family: "Ubuntu", sans-serif;
+}
+#example {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 100px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.list a {
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-left: 4px solid #fff;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+ul.list li {
+  border-left: 4px solid #fff;
+}
+
+li:hover > a {
+  color:#fff
+}
+ul.list li .title {
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+  line-height: 24px;
+}
+ul.list li .subtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+ul.list li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+ul.list li:hover {
+  color: #fff;
+}
+ul.list li:hover:after {
+  width: 100%;
+  transition: width 0.3s ease;
+}
+/* herren1 */
+ul.list li.herren1:after {
+  background: linear-gradient(102deg, #cc00c5 0%, #1061b7 100%);
+}
+ul.list li.herren1 {
+  border-left-color: #cc00c5;
+}
+/* herren2 */
+ul.list li.herren2:after {
+  background: linear-gradient(102deg, #00cc88 0%, #1096b7 100%);
+}
+ul.list li.herren2 {
+  border-left-color: #00cc88;
+}
+/* Work */
+ul.list li.work:after {
+  background: linear-gradient(102deg, #fa5437 0%, #ed4618 100%);
+}
+ul.list li.work {
+  border-left-color: #fa5437;
+}
